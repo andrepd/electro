@@ -43,10 +43,31 @@ O objectivo deste trabalho foi obter e analisar a histerese de um material (chav
 Para estudar a curva de histerese, utilizamos uma chave de parafusos, que colocámos no centro de uma bobina. Na bobina fez-se passar uma corrente eléctrica, alimentada por uma fonte de alimentação que permitia variar a intensidade da corrente - medida por um multímetro colocado em série. Assim foi possível criar no centro da bobina um campo magnético, dado aproximadamente por $\mathbf{H}=nI$, sendo $n=1500$ o número de espiras e $I$ a intensidade da corrente. Depois de colocada a chave de parafusos no interior do solenóide, variou-se a intensidade da corrente aplicada e mediu-se o campo $\mathbf{B}$ resultante. Apesar de existirem simultaneamente os campos $\mathbf{H}$ e $\mathbf{M}$ quando a chave se encontra no solenóide, este último tem uma ordem de grandeza consideravelmente superior ao primeiro, pelo que a Equação \ref{campos} pode ser aproximada por $\mathbf{B} \approx \mu_0 \mathbf{M}$. Assim, $\mathbf{B}$ é uma boa estimativa do campo de magnetização.
 
 \subsection{Determinação dos campos $ \mathbf{H}$ e $ \mathbf{B}$}
-Para medir os campos magnéticos, usou-se um sensor de Hall (ref. SS490A1) que devolve uma diferença de potencial $V$ em função da magnitude do campo detectado, $B$. A curva de calibração que relaciona estes valores é \begin{equation}\label{calibracao}B=320V-800,\end{equation}
+Para medir os campos magnéticos, usou-se um sensor de Hall (ref.\ SS490A1) que devolve uma diferença de potencial $V$ em função da magnitude do campo detectado, $B$. A curva de calibração que relaciona estes valores é \begin{equation}\label{calibracao}B=320V-800,\end{equation}
 com $B$ em Gauss e $V$ em Volt.
 
+O sensor apenas mede o campo \textbf{B} total existente numa região. No entanto, para o nosso objectivo, é necessário determinar o campo \textbf{H} existente independentemente do material ferromagnético. Para isso, dividimos a experência em duas partes:
+\begin{enumerate}
+\item Medir o campo magnético $B$ sem a chave de parafusos no solenóide, em função da intensidade da corrente $I$ utilizada.  Determinar a expressão para a curva $H(I)$, sabendo que neste caso $H=B/\mu_0$.
+\item Medir o campo magnético $B$ com a chave de parafusos no solenóide, em função da corrente $I$ utilizada.
+\end{enumerate}
+
+Com base na curva de calibração determinada na primeira parte e nos valores de $I$ obtidos na segunda, podemos determinar o campo $H$ existente quando o ferromagnete se encontra presente. O campo $B$ da segunda parte da experiência, como já vimos, dá-nos a magnetização do material.
+
+Com os resultados obtidos, realizámos um gráfico de $B(H)$ na presença do ferromagnete, para observar a curva de histerese.
+
 \section{Resultados}
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{./Imagens/grafico1.pdf}
+\caption{Curva de calibração de $H$ em função de $I$.}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{./Imagens/grafico2.pdf}
+\caption{Curva de histerese: campo medido $B$ em função de $H(I)$, determinado pela recta de calibração.}
+\end{figure*}
 
 \section{Análise e discussão dos dados}
 \section{Anexos}
