@@ -1,43 +1,62 @@
-\documentclass[10pt,notitlepage,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{booktabs}
-\usepackage[portuguese]{babel}
-\usepackage{graphicx}
+\documentclass[a4paper]{article}
+
+%Appearence ----------------------
 \usepackage{titling}
-\usepackage{geometry}
-\usepackage{indentfirst}
-\usepackage{amsmath}	
-\usepackage{amsfonts}	
-\usepackage[font={small}]{caption}
-\usepackage{tabu}
-
-\geometry{
-  includeheadfoot,
-  margin=2.54cm
-}
-
 \newcommand{\subtitle}[1]{%
   \posttitle{%
     \par\end{center}
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
+\usepackage{indentfirst}
+\usepackage[font={small}]{caption}
+\usepackage{geometry}
+\geometry{
+  margin=2.54cm
+}
 
-\title{Relatório de Eletromagnetismo I}
-\subtitle{Estudo de uma curva de histerese}
+%Portuguese packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+
+%Add-ons -----------------------------
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}	
+\usepackage{amsfonts}	
+\usepackage{tabu}
+
+\title{Relatório de Electromagnetismo I}
+\subtitle{Estudo da histerese de um material ferromagnético}
 \author{André Duarte, Marcos Gouveia e Sagar Pratapsi}	
-\date{ de Novembro de 2013}
+\date{3 de Dezembro de 2013}
 
 \begin{document}
 
 \maketitle
 
 \section{Introdução}
-
-\section{Métodos}
-
 \section{Resultados}
 
+\section{Análise e discussão dos dados}
 \section{Anexos}
+\subsection{Cálculo dos erros associados às medidas}
+Na secção 3, as grandezas obtidas foram medidas directamente, pelo que os erros foram estimados tendo em conta o método de medição usado. No entanto, na secção 4, as grandezas foram calculadas a partir das obtidas directamente, pelo que há propagações de erros envolvidas. Esses erros foram calculados pela fórmula de propagação de erros: \begin{equation} \delta f(x_1,x_2,\ldots,x_n)=\sqrt{\sum_{i=1}^{n}\left( \frac{\partial f}{\partial x_i}\delta x_i \right)^2}\end{equation}.
+
+Aqui, $f$ é uma grandeza calculada a partir das grandezas $x_1,x_2,\ldots,x_n$, e $\delta x_i$ são os erros associados às mesmas. Na Tabela 4 apresentamos as equações das grandezas calculadas bem como os respetivos erros.
+\renewcommand{\arraystretch}{2.5}
+\begin{table}[htbp]
+\begin{center}
+\caption{Resumo das equações utilizadas para efectuar o cálculo de grandezas relevantes e o respectivo erro, calculado pela fórmula de propagação de erros - equação (4).}
+\begin{tabular}{lll}
+\textbf{Grandeza} & $f(x_1,x_2,\ldots,x_n)$ & $\delta f(x_1,x_2,\ldots,x_n)$ \\ \hline
+\textbf{Área}&$\displaystyle A=\pi\left(\frac{d}{2}\right)^2 $ & $\displaystyle \delta A= \frac{\pi d}{2}\delta d $ \\
+\textbf{Área média} &$\displaystyle A_g=\frac{A_i+A_f}{2}$ & $ \displaystyle\delta A_g=\frac{1}{2}\sqrt{\delta A_i^2+\delta A_f^2}$ \\
+\textbf{Taxa de fusão} &$\displaystyle R=R_a=\frac{m_f-m_i}{\Delta t}$&$ \displaystyle\delta R=\delta R_a= \sqrt{\left( \frac{\delta m_i}{\Delta t}\right)^2+\left( \frac{m_f}{\Delta t}\right)^2+\left( \frac{m_f-m_i}{\Delta t^2}\delta(\Delta t)\right)^2}$ \\
+\textbf{Taxa de fusão efectiva}&$\displaystyle R_0=R-R_a$ & $ \displaystyle \delta R_0= \sqrt{\delta R^2+\delta R_a^2}$ \\
+\textbf{Condutividade}&$\displaystyle k=\frac{R_0 L_g h}{A_g \Delta T} $& $ \displaystyle \delta k= k\sqrt{\left(\frac{\delta R_0}{R_0}\right)^2+\left(\frac{\delta h}{h}\right)^2+\left(\frac{\delta A_g}{A_g}\right)^2}$ \\ [2ex] \hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \end{document}
