@@ -25,6 +25,7 @@
 \usepackage{amsmath}	
 \usepackage{amsfonts}	
 \usepackage{tabu}
+\usepackage{longtable}
 
 \title{Relatório de Electromagnetismo I}
 \subtitle{Estudo da histerese de um material ferromagnético}
@@ -57,31 +58,48 @@ Com base na curva de calibração determinada na primeira parte e nos valores de
 Com os resultados obtidos, realizámos um gráfico de $B(H)$ na presença do ferromagnete, para observar a curva de histerese.
 
 \section{Resultados}
+Apresentamos agora os resultados obtidos durante a experiência. Apresentamos os dados sob a forma de gráficos para facilitação da sua visualização, mas na secção dos anexos apresentamos os dados reais obtidos durante a experiência.
+
+Na Figura 1 apresentamos os pontos obtidos para $H(I)$, usando a Equação 2, de calibração, e a relação $B=\mu_0 I$.
 
 \begin{figure*}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{./Imagens/grafico1.pdf}
-\caption{Curva de calibração de $H$ em função de $I$, correspondente a uma recta de equacão $H=(10,44\times 10^3 \pm 68)I-(101\pm 55.05)$}
+\caption{Dados obtidos para o campo $H$ em função da intensidade da corrente $I$, e respectiva regressão linear, efectuada pelo método dos mínimos quadrados.}
 \end{figure*}
 
+Seguidamente, realizámos uma regressão linear do tipo $H=\alpha I + \beta $ utilizando os dados representados na Figura 1, pelo método dos mínimos quadrados, e tendo em conta os erros nas duas variáveis pelo método dos erros equivalentes \footnote{No método dos erros equivalentes, para ter em conta ambos os erros, primeiro realiza-se uma regressão linear tendo em conta apenas erros em $y$, a variável dependente. Assim, obtém-se um declive $m$, que é utilizado para calcular um erro total, chamado erro equivalente, dado por $\sigma_{eq}=\sqrt{\sigma_y^2+(m\sigma_x)^2}$. Este erro é então associado novamente à variável dependente, sendo realizada uma nova regressão com este erro, em vez de $\sigma_y$.}. A equação da recta obtida foi:
+\begin{equation}
+H=(1.044(7)\times 10^{5})~I-(1.0(6)\times 10^{2})
+\end{equation}
+Tiramos então o valor de $\alpha$ e de $\beta$ e respetivas incertezas $\sigma_{\alpha}$ e $\sigma_{\beta}$ :
+$$\alpha \pm \sigma_{\alpha}=(1.044 \pm 0.007) \times 10^{5} \mathrm{~(A/m)}$$
+$$\beta \pm \sigma_{\beta}=(-1.0 \pm 0.6) \times 10^{2} \mathrm{~ (m}^{-1})$$
+O valor do chi-quadrado reduzido obtido para a regressão linear foi de $ \chi^2=0.28$.
+
+Finalmente, na Figura 2, apresentamos os pontos obtidos para $B$, obtidos pela Equação 2, e para H, obtidos utilizando a recta de calibração obtida.
 \begin{figure*}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{./Imagens/grafico2.pdf}
-\caption{Curva de histerese: campo medido $B$ em função de $H(I)$, determinado pela recta de calibração.}
+\caption{Curva de histerese: campo medido $B$ em função de $H(I)$, determinado pela recta de calibração. A cinzento apresenta-se a primeira parte do ciclo.}
 \end{figure*}
 
 \section{Análise e discussão dos dados}
 
+\subsection{Obtençao dos valores do campo magnetico coersivo e remanescente}
+Achando as intercepções da curva de histerese obtida com o eixo do $xx$ e $yy$, obtemos respectivamente os valores de $-H_c$ e de $B_r$ que são $-1250.28 (A.m^{-1})$ e $0.013 (T)$
+
 Na equacão da recta de calibracão do solenóide, podemos interpretar o declive como sendo $n$, o número de espiras por unidade de comprimento do solenóide. Sabendo que o solenóide mede sensívelmene 14,5cm e tem 1500 espiras, obtemos $n=10,34\times 10^3$, o que é coerente com o valor expermiental. O valor da ordenada da origem é bastante pequeno, e pode-se atribuir a erros experimentais.
 
-%Na figura 2 podemos observar o efeito de histerese do material. Em primeiro lugar, vemos um valor nulo de $H$ a corresponder a um valor nulo de $B$, visto que o material não aprezentava magnetiza¢ão remanescente. No entanto, após se atingir o valor máximo de $H$ aplicado, quando realizamos o processo em sentido inverso, o campo $B$ medido para o mesmo valor de $H$ é superior ao medido quando se realizou este processo pela primeira vez. Isto deve-se ao ``efeito de memória'' que resulta da magnetizacao que o material adquiriu durante o primeiro processo. Isto continua a verificar-se, mas em sentido inverso, uma vez aplicando o máximo de corrente negativa e voltando a descer até $H=0$. Repete-se este processo uma vez mais para valores positivos de corrente, verificando-se de novo a histerese no material.
+Na figura 2, podemos observar o efeito de histerese do material. Em primeiro lugar, vemos um valor nulo de $H$ a corresponder a um valor nulo de $B$, visto que o material não apresentava magnetização remanescente. No entanto, após se atingir o valor máximo de $H$ aplicado, quando realizamos o processo em sentido inverso, o campo $B$ medido para o mesmo valor de $H$ é superior ao medido quando se realizou este processo pela primeira vez. Isto deve-se ao ``efeito de memória'' que resulta da magnetizacao que o material adquiriu durante o primeiro processo. Isto continua a verificar-se, mas em sentido inverso, uma vez aplicando o máximo de corrente negativa e voltando a descer até $H=0$. Repete-se este processo uma vez mais para valores positivos de corrente, verificando-se de novo a histerese no material.
 
 \newpage
 \section{Anexos}
+Apresentamos os dados recolhidos da intensidade da corrente na bobine, $I$, e da diferença de potencial $V$ no sensor de Hall para as duas partes da experiência, a calibração e a medida da histerese. Estes dados encontram-se respectivamente nas Tabelas 1 e 2, na forma sugerida. Calculam-se também os campos $B$ e $H$ para cada caso.
 \subsection{Dados recolhidos}
 \begin{table}[htbp]
 \center
-\caption{Dados recolhidos para a calibração}
+\caption{Dados recolhidos de $I$ e $V$ para a calibração; cálculo de $B$ e $H$.}
 \begin{tabular}{rlrlrlrl}
 \hline
 \multicolumn{ 2}{c}{I (A)} & \multicolumn{ 2}{c}{V (V)} & \multicolumn{ 2}{c}{B (G)} & \multicolumn{ 2}{c}{H (A/m)} \\ \hline
@@ -116,85 +134,88 @@ Na equacão da recta de calibracão do solenóide, podemos interpretar o declive
 \label{calibracao}
 \end{table}
 
-\begin{table}[htbp]
-\center
-\caption{Dados recolhidos para a histerese}
-\begin{tabular}{rlrlrlrl}
+\begin{center}
+\begin{longtable}[htbp]{rlrlrlrl}
+\caption{Dados recolhidos de $I$ e $V$ para a histerese do material; cálculo de $B$ e $G$.} \label{histerese} \\
 \hline
-\multicolumn{ 2}{c}{I (A)} & \multicolumn{ 2}{c}{V (V)} & \multicolumn{ 2}{c}{B (T)} & \multicolumn{ 2}{c}{H (A/m)} \\ \hline
-    0     & 0.01 & 2.14 & 0.01 & -0.01152 & 0.00032 & -101.7650355752   & 118.0363192245 \\
-    0.1   & 0.01 & 2.49 & 0.01 & -0.00032 & 0.00032 & 942.3409104197    & 118.2302742768 \\
-    0.2   & 0.01 & 2.95 & 0.01 & 0.0144   & 0.00032 & 1986.4468564145   & 118.8102396853 \\
-    0.31  & 0.01 & 3.38 & 0.01 & 0.02816  & 0.00032 & 3134.9633970089   & 119.8872464539 \\
-    0.41  & 0.01 & 3.65 & 0.01 & 0.0368   & 0.00032 & 4179.0693430038   & 121.2554847367 \\
-    0.5   & 0.01 & 3.82 & 0.01 & 0.04224  & 0.00032 & 5118.7646943992   & 122.793322879  \\
-    0.61  & 0.01 & 3.99 & 0.01 & 0.04768  & 0.00032 & 6267.2812349935   & 125.050888076  \\
-    0.71  & 0.01 & 4.12 & 0.01 & 0.05184  & 0.00032 & 7311.3871809884   & 127.4465218123 \\
-    0.82  & 0.01 & 4.24 & 0.01 & 0.05568  & 0.00032 & 8459.9037215827   & 130.4371586117 \\
-    0.91  & 0.01 & 4.33 & 0.01 & 0.05856  & 0.00032 & 9399.5990729781   & 133.1440916675 \\
-    1.02  & 0.01 & 4.43 & 0.01 & 0.06176  & 0.00032 & 10548.1156135725  & 136.7487331145 \\
-    1.13  & 0.01 & 4.51 & 0.01 & 0.06432  & 0.00032 & 11696.6321541668  & 140.6555353041 \\
-    1.23  & 0.01 & 4.57 & 0.01 & 0.06624  & 0.00032 & 12740.7381001617  & 144.4487866338 \\
-    1.29  & 0.01 & 4.6  & 0.01 & 0.0672   & 0.00032 & 13367.2016677586  & 146.827543276  \\
-    1.16  & 0.01 & 4.49 & 0.01 & 0.06368  & 0.00032 & 12009.8639379653  & 141.7702297567 \\
-    1.04  & 0.01 & 4.4  & 0.01 & 0.0608   & 0.00032 & 10756.9368027714  & 137.4373145051 \\
-    0.79  & 0.01 & 4.16 & 0.01 & 0.05312  & 0.00032 & 8146.6719377843   & 129.5859449018 \\
-    0.68  & 0.01 & 4.04 & 0.01 & 0.04928  & 0.00032 & 6998.1553971899   & 126.6946141599 \\
-    0.57  & 0.01 & 3.92 & 0.01 & 0.04544  & 0.00032 & 5849.6388565956   & 124.1830509327 \\
-    0.45  & 0.01 & 3.78 & 0.01 & 0.04096  & 0.00032 & 4596.7117214017   & 121.9037773041 \\
-    0.32  & 0.01 & 3.63 & 0.01 & 0.03616  & 0.00032 & 3239.3739916084   & 120.0075900724 \\
-    0.2   & 0.01 & 3.31 & 0.01 & 0.02592  & 0.00032 & 1986.4468564145   & 118.8102396853 \\
-    0.08  & 0.01 & 3.16 & 0.01 & 0.02112  & 0.00032 & 733.5197212207    & 118.160487134  \\
-    0     & 0.01 & 2.91 & 0.01 & 0.01312  & 0.00032 & -101.7650355752   & 118.0363192245 \\
-    0     & 0.01 & 2.84 & 0.01 & 0.01088  & 0.00032 & -101.7650355752   & 118.0363192245 \\
-    -0.11 & 0.01 & 2.45 & 0.01 & -0.0016  & 0.00032 & -1250.2815761696  & 118.2709644269 \\
-    -0.22 & 0.01 & 2.03 & 0.01 & -0.01504 & 0.00032 & -2398.7981167639  & 118.9721233637 \\
-    -0.33 & 0.01 & 1.7  & 0.01 & -0.0256  & 0.00032 & -3547.3146573583  & 120.1316277658 \\
-    -0.43 & 0.01 & 1.51 & 0.01 & -0.03168 & 0.00032 & -4591.4206033531  & 121.572524634  \\
-    -0.54 & 0.01 & 1.34 & 0.01 & -0.03712 & 0.00032 & -5739.9371439475  & 123.5671176227 \\
-    -0.66 & 0.01 & 1.2  & 0.01 & -0.0416  & 0.00032 & -6992.8642791413  & 126.2090091493 \\
-    -0.77 & 0.01 & 1.07 & 0.01 & -0.04576 & 0.00032 & -8141.3808197357  & 129.0331074013 \\
-    -0.88 & 0.01 & 1    & 0.01 & -0.048   & 0.00032 & -9289.8973603301  & 132.2167476594 \\
-    -1    & 0.01 & 0.91 & 0.01 & -0.05088 & 0.00032 & -10542.8244955239 & 136.0701385552 \\
-    -1.09 & 0.01 & 0.85 & 0.01 & -0.0528  & 0.00032 & -11482.5198469193 & 139.2014824924 \\
-    -1.2  & 0.01 & 0.84 & 0.01 & -0.05312 & 0.00032 & -12631.0363875136 & 143.287776815  \\
-    -1.26 & 0.01 & 0.81 & 0.01 & -0.05408 & 0.00032 & -13257.4999551106 & 145.6288620201 \\
-    -1.1  & 0.01 & 0.9  & 0.01 & -0.0512  & 0.00032 & -11586.9304415188 & 139.5614907344 \\
-    -0.98 & 0.01 & 0.98 & 0.01 & -0.04864 & 0.00032 & -10334.0033063249 & 135.4016809807 \\
-    -0.88 & 0.01 & 1.09 & 0.01 & -0.04512 & 0.00032 & -9289.8973603301  & 132.2167476594 \\
-    -0.74 & 0.01 & 1.17 & 0.01 & -0.04256 & 0.00032 & -7828.1490359372  & 128.226187282  \\
-    -0.6  & 0.01 & 1.33 & 0.01 & -0.03744 & 0.00032 & -6366.4007115444  & 124.8289879723 \\
-    -0.46 & 0.01 & 1.47 & 0.01 & -0.03296 & 0.00032 & -4904.6523871516  & 122.0746974666 \\
-    -0.33 & 0.01 & 1.61 & 0.01 & -0.02848 & 0.00032 & -3547.3146573583  & 120.1316277658 \\
-    -0.19 & 0.01 & 1.78 & 0.01 & -0.02304 & 0.00032 & -2085.5663329655  & 118.7350043807 \\
-    0     & 0.01 & 2.17 & 0.01 & -0.01056 & 0.00032 & -101.7650355752   & 118.0363192245 \\
-    0     & 0.01 & 2.33 & 0.01 & -0.00544 & 0.00032 & -101.7650355752   & 118.0363192245 \\
-    0.1   & 0.01 & 2.56 & 0.01 & 0.00192  & 0.00032 & 942.3409104197    & 118.2302742768 \\
-    0.2   & 0.01 & 2.88 & 0.01 & 0.01216  & 0.00032 & 1986.4468564145   & 118.8102396853 \\
-    0.32  & 0.01 & 3.12 & 0.01 & 0.01984  & 0.00032 & 3239.3739916084   & 120.0075900724 \\
-    0.43  & 0.01 & 3.25 & 0.01 & 0.024    & 0.00032 & 4387.8905322027   & 121.572524634  \\
-    0.54  & 0.01 & 3.36 & 0.01 & 0.02752  & 0.00032 & 5536.4070727971   & 123.5671176227 \\
-    0.68  & 0.01 & 3.46 & 0.01 & 0.03072  & 0.00032 & 6998.1553971899   & 126.6946141599 \\
-    0.8   & 0.01 & 3.54 & 0.01 & 0.03328  & 0.00032 & 8251.0825323838   & 129.8667741353 \\
-    0.93  & 0.01 & 3.6  & 0.01 & 0.0352   & 0.00032 & 9608.4202621771   & 133.7758779158 \\
-    1.01  & 0.01 & 3.62 & 0.01 & 0.03584  & 0.00032 & 10443.705018973   & 136.4081781142 \\
-    1.12  & 0.01 & 3.67 & 0.01 & 0.03744  & 0.00032 & 11592.2215595673  & 140.2885353042 \\
-    1.25  & 0.01 & 3.71 & 0.01 & 0.03872  & 0.00032 & 12949.5592893607  & 145.233413695  \\
-    1.16  & 0.01 & 3.63 & 0.01 & 0.03616  & 0.00032 & 12009.8639379653  & 141.7702297567 \\
-    0.97  & 0.01 & 3.53 & 0.01 & 0.03296  & 0.00032 & 10026.062640575   & 135.0713006836 \\
-    0.84  & 0.01 & 3.39 & 0.01 & 0.02848  & 0.00032 & 8668.7249107817   & 131.0190508172 \\
-    0.72  & 0.01 & 3.26 & 0.01 & 0.02432  & 0.00032 & 7415.7977755879   & 127.7033508344 \\
-    0.6   & 0.01 & 3.19 & 0.01 & 0.02208  & 0.00032 & 6162.870640394    & 124.8289879723 \\
-    0.48  & 0.01 & 3.1  & 0.01 & 0.0192   & 0.00032 & 4909.9435052002   & 122.4270515394 \\
-    0.38  & 0.01 & 3    & 0.01 & 0.016    & 0.00032 & 3865.8375592053   & 120.8068172451 \\
-    0.27  & 0.01 & 2.91 & 0.01 & 0.01312  & 0.00032 & 2717.321018611    & 119.4430309036 \\
-    0.12  & 0.01 & 2.77 & 0.01 & 0.00864  & 0.00032 & 1151.1620996187   & 118.3155137729 \\
-    0     & 0.01 & 2.63 & 0.01 & 0.00416  & 0.00032 & -101.7650355752   & 118.0363192245 \\
+\multicolumn{ 2}{c}{I (A)} & \multicolumn{ 2}{c}{V (V)} & \multicolumn{ 2}{c}{B (T)} & \multicolumn{ 2}{c}{H (A/m)} \\ \hline \endfirsthead
 \hline
-\end{tabular}
-\label{histerese}
-\end{table}
-
+\multicolumn{ 2}{c}{I (A)} & \multicolumn{ 2}{c}{V (V)} & \multicolumn{ 2}{c}{B (T)} & \multicolumn{ 2}{c}{H (A/m)} \\ \hline \endhead
+\hline
+\multicolumn{8}{c}{(A tabela continua na página seguinte)}
+\endfoot
+\endlastfoot
+0.00 & $\pm$ 0.01 & 2.14 & $\pm$ 0.01 & -115.2 & $\pm$ 3.2 & -1.1$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.10 & $\pm$ 0.01 & 2.49 & $\pm$ 0.01 & -3.2 & $\pm$ 3.2 & 9.4$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.20 & $\pm$ 0.01 & 2.95 & $\pm$ 0.01 & 144.0 & $\pm$ 3.2 & 1.99$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.31 & $\pm$ 0.01 & 3.38 & $\pm$ 0.01 & 281.6 & $\pm$ 3.2 & 3.14$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.41 & $\pm$ 0.01 & 3.65 & $\pm$ 0.01 & 368.0 & $\pm$ 3.2 & 4.18$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.50 & $\pm$ 0.01 & 3.82 & $\pm$ 0.01 & 422.4 & $\pm$ 3.2 & 5.12$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.61 & $\pm$ 0.01 & 3.99 & $\pm$ 0.01 & 476.8 & $\pm$ 3.2 & 6.27$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.71 & $\pm$ 0.01 & 4.12 & $\pm$ 0.01 & 518.4 & $\pm$ 3.2 & 7.31$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.82 & $\pm$ 0.01 & 4.24 & $\pm$ 0.01 & 556.8 & $\pm$ 3.2 & 8.46$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.91 & $\pm$ 0.01 & 4.33 & $\pm$ 0.01 & 585.6 & $\pm$ 3.2 & 9.40$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+1.02 & $\pm$ 0.01 & 4.43 & $\pm$ 0.01 & 617.6 & $\pm$ 3.2 & 1.055$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.13 & $\pm$ 0.01 & 4.51 & $\pm$ 0.01 & 643.2 & $\pm$ 3.2 & 1.170$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.23 & $\pm$ 0.01 & 4.57 & $\pm$ 0.01 & 662.4 & $\pm$ 3.2 & 1.274$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.29 & $\pm$ 0.01 & 4.60 & $\pm$ 0.01 & 672.0 & $\pm$ 3.2 & 1.337$\times 10^{4}$ & $\pm$ 1.5$\times 10^{2}$ \\ 
+1.16 & $\pm$ 0.01 & 4.49 & $\pm$ 0.01 & 636.8 & $\pm$ 3.2 & 1.201$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.04 & $\pm$ 0.01 & 4.40 & $\pm$ 0.01 & 608.0 & $\pm$ 3.2 & 1.076$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+0.79 & $\pm$ 0.01 & 4.16 & $\pm$ 0.01 & 531.2 & $\pm$ 3.2 & 8.15$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.68 & $\pm$ 0.01 & 4.04 & $\pm$ 0.01 & 492.8 & $\pm$ 3.2 & 7.00$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.57 & $\pm$ 0.01 & 3.92 & $\pm$ 0.01 & 454.4 & $\pm$ 3.2 & 5.85$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.45 & $\pm$ 0.01 & 3.78 & $\pm$ 0.01 & 409.6 & $\pm$ 3.2 & 4.60$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.32 & $\pm$ 0.01 & 3.63 & $\pm$ 0.01 & 361.6 & $\pm$ 3.2 & 3.24$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.20 & $\pm$ 0.01 & 3.31 & $\pm$ 0.01 & 259.2 & $\pm$ 3.2 & 1.99$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.08 & $\pm$ 0.01 & 3.16 & $\pm$ 0.01 & 211.2 & $\pm$ 3.2 & 7.3$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.00 & $\pm$ 0.01 & 2.91 & $\pm$ 0.01 & 131.2 & $\pm$ 3.2 & -1.0$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.00 & $\pm$ 0.01 & 2.84 & $\pm$ 0.01 & 108.8 & $\pm$ 3.2 & -1.0$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.11 & $\pm$ 0.01 & 2.45 & $\pm$ 0.01 & -16.0 & $\pm$ 3.2 & -1.25$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.22 & $\pm$ 0.01 & 2.03 & $\pm$ 0.01 & -150.4 & $\pm$ 3.2 & -2.40$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.33 & $\pm$ 0.01 & 1.70 & $\pm$ 0.01 & -256.0 & $\pm$ 3.2 & -3.55$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.43 & $\pm$ 0.01 & 1.51 & $\pm$ 0.01 & -316.8 & $\pm$ 3.2 & -4.59$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.54 & $\pm$ 0.01 & 1.34 & $\pm$ 0.01 & -371.2 & $\pm$ 3.2 & -5.74$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.66 & $\pm$ 0.01 & 1.20 & $\pm$ 0.01 & -416.0 & $\pm$ 3.2 & -6.99$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+-0.77 & $\pm$ 0.01 & 1.07 & $\pm$ 0.01 & -457.6 & $\pm$ 3.2 & -8.14$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+-0.88 & $\pm$ 0.01 & 1.00 & $\pm$ 0.01 & -480.0 & $\pm$ 3.2 & -9.29$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+-1.00 & $\pm$ 0.01 & 0.91 & $\pm$ 0.01 & -508.8 & $\pm$ 3.2 & -1.054$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+-1.09 & $\pm$ 0.01 & 0.85 & $\pm$ 0.01 & -528.0 & $\pm$ 3.2 & -1.148$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+-1.20 & $\pm$ 0.01 & 0.84 & $\pm$ 0.01 & -531.2 & $\pm$ 3.2 & -1.263$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+-1.26 & $\pm$ 0.01 & 0.81 & $\pm$ 0.01 & -540.8 & $\pm$ 3.2 & -1.326$\times 10^{4}$ & $\pm$ 1.5$\times 10^{2}$ \\ 
+-1.10 & $\pm$ 0.01 & 0.90 & $\pm$ 0.01 & -512.0 & $\pm$ 3.2 & -1.159$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+-0.98 & $\pm$ 0.01 & 0.98 & $\pm$ 0.01 & -486.4 & $\pm$ 3.2 & -1.033$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+-0.88 & $\pm$ 0.01 & 1.09 & $\pm$ 0.01 & -451.2 & $\pm$ 3.2 & -9.29$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+-0.74 & $\pm$ 0.01 & 1.17 & $\pm$ 0.01 & -425.6 & $\pm$ 3.2 & -7.83$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+-0.60 & $\pm$ 0.01 & 1.33 & $\pm$ 0.01 & -374.4 & $\pm$ 3.2 & -6.37$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.46 & $\pm$ 0.01 & 1.47 & $\pm$ 0.01 & -329.6 & $\pm$ 3.2 & -4.90$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.33 & $\pm$ 0.01 & 1.61 & $\pm$ 0.01 & -284.8 & $\pm$ 3.2 & -3.55$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+-0.19 & $\pm$ 0.01 & 1.78 & $\pm$ 0.01 & -230.4 & $\pm$ 3.2 & -2.09$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.00 & $\pm$ 0.01 & 2.17 & $\pm$ 0.01 & -105.6 & $\pm$ 3.2 & -1.0$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.00 & $\pm$ 0.01 & 2.33 & $\pm$ 0.01 & -54.4 & $\pm$ 3.2 & -1.0$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.10 & $\pm$ 0.01 & 2.56 & $\pm$ 0.01 & 19.2 & $\pm$ 3.2 & 9.4$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.20 & $\pm$ 0.01 & 2.88 & $\pm$ 0.01 & 121.6 & $\pm$ 3.2 & 1.99$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.32 & $\pm$ 0.01 & 3.12 & $\pm$ 0.01 & 198.4 & $\pm$ 3.2 & 3.24$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.43 & $\pm$ 0.01 & 3.25 & $\pm$ 0.01 & 240.0 & $\pm$ 3.2 & 4.39$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.54 & $\pm$ 0.01 & 3.36 & $\pm$ 0.01 & 275.2 & $\pm$ 3.2 & 5.54$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.68 & $\pm$ 0.01 & 3.46 & $\pm$ 0.01 & 307.2 & $\pm$ 3.2 & 7.00$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.80 & $\pm$ 0.01 & 3.54 & $\pm$ 0.01 & 332.8 & $\pm$ 3.2 & 8.25$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.93 & $\pm$ 0.01 & 3.60 & $\pm$ 0.01 & 352.0 & $\pm$ 3.2 & 9.61$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+1.01 & $\pm$ 0.01 & 3.62 & $\pm$ 0.01 & 358.4 & $\pm$ 3.2 & 1.044$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.12 & $\pm$ 0.01 & 3.67 & $\pm$ 0.01 & 374.4 & $\pm$ 3.2 & 1.159$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+1.25 & $\pm$ 0.01 & 3.71 & $\pm$ 0.01 & 387.2 & $\pm$ 3.2 & 1.295$\times 10^{4}$ & $\pm$ 1.5$\times 10^{2}$ \\ 
+1.16 & $\pm$ 0.01 & 3.63 & $\pm$ 0.01 & 361.6 & $\pm$ 3.2 & 1.201$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+0.97 & $\pm$ 0.01 & 3.53 & $\pm$ 0.01 & 329.6 & $\pm$ 3.2 & 1.003$\times 10^{4}$ & $\pm$ 1.4$\times 10^{2}$ \\ 
+0.84 & $\pm$ 0.01 & 3.39 & $\pm$ 0.01 & 284.8 & $\pm$ 3.2 & 8.67$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.72 & $\pm$ 0.01 & 3.26 & $\pm$ 0.01 & 243.2 & $\pm$ 3.2 & 7.42$\times 10^{3}$ & $\pm$ 1.3$\times 10^{2}$ \\ 
+0.60 & $\pm$ 0.01 & 3.19 & $\pm$ 0.01 & 220.8 & $\pm$ 3.2 & 6.16$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.48 & $\pm$ 0.01 & 3.10 & $\pm$ 0.01 & 192.0 & $\pm$ 3.2 & 4.91$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.38 & $\pm$ 0.01 & 3.00 & $\pm$ 0.01 & 160.0 & $\pm$ 3.2 & 3.87$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.27 & $\pm$ 0.01 & 2.91 & $\pm$ 0.01 & 131.2 & $\pm$ 3.2 & 2.72$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.12 & $\pm$ 0.01 & 2.77 & $\pm$ 0.01 & 86.4 & $\pm$ 3.2 & 1.15$\times 10^{3}$ & $\pm$ 1.2$\times 10^{2}$ \\ 
+0.00 & $\pm$ 0.01 & 2.63 & $\pm$ 0.01 & 41.6 & $\pm$ 3.2 & -1.0$\times 10^{2}$ & $\pm$ 1.2$\times 10^{2}$ \\
+\hline
+\end{longtable}
+\end{center}
 \newpage
 \subsection{Cálculo dos erros associados às medidas}
 Na secção 3, as grandezas obtidas foram medidas directamente, pelo que os erros foram estimados tendo em conta o método de medição usado. No entanto, na secção 4, as grandezas foram calculadas a partir das obtidas directamente, pelo que há propagações de erros envolvidas. Esses erros foram calculados pela fórmula de propagação de erros: \begin{equation} \delta f(x_1,x_2,\ldots,x_n)=\sqrt{\sum_{i=1}^{n}\left( \frac{\partial f}{\partial x_i}\delta x_i \right)^2}\end{equation}.
